@@ -1,33 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './components/Button';
+import List from './components/List';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [show, setShow] = useState(true);
+  const [todos, setTodos] = useState([
+    { title: "first todo", description: "first todo description 1" },
+    { title: "second todo", description: "second todo description 2" },
+    { title: "third todo", description: "third todo description 3" },
+    { title: "fourth todo", description: "fourth todo description 4" },
+  ])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* conditional rendering... */}
+      <div className='con_render' >
+        {show && <Button name={"Temp Button 1"} />}
+        {show ? <Button name="Temp Button 2" /> : ""}
+        <br />
+        <button onClick={() => { setShow(!show) }} >{show ? "unshow" : "show"}</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      {/* list rendering */}
+      <div className='todo_container' >
+
+        {todos.map((todo , index ,arr)=> {
+          return <List  key={todo.title} title={todo.title} description={todo.description} />
+        })}
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
