@@ -10,12 +10,20 @@ function Form() {
         setForm((val)=> { return {...val , [e.target.name] : e.target.value} });
     }
 
-    useEffect(()=> {
+    function handleSubmit(e){
+        e.preventDefault();
+        alert("Form submitted , ");
         console.log(form);
+        // clear form input
+        setForm(val=> {return {name:"" , email:""}})
+    }
+
+    useEffect(()=> {
+        // console.log(form);
     } , [form])
     
     return (
-        <form className='form_container' >
+        <form className='form_container' onSubmit={handleSubmit} >
             <div className="input_wrapper">
                 <label htmlFor="name">Name</label>
                 <input onChange={handleChange} value={form.name} autoComplete='off' name='name' id='name' type="text" />
