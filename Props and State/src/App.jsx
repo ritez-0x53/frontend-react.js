@@ -8,16 +8,20 @@ function App() {
 
   return (
     <div className='app-container' >
-      <Navbar/>
+      {/* navbar component */}
+      <Navbar />
+      
       <div className="cards_container">
-      <Card title={"Card-1"} desc={"Lorem ipsum dolor sit amet"} />
-      <Card title="Card-2" desc="Lorem ipsum dolor sit amet "/>
-      <Card title="Card-3" desc="Lorem ipsum dolor sit amet "/>
-      <Card title="Card-4" desc="Lorem ipsum dolor sit amet "/>
-      <Card title="Card-5" desc="Lorem ipsum dolor sit amet "/>
-     
+        {/* passing props title and desc in Card component */}
+        <Card title={"Card-1"} desc={"Lorem ipsum dolor sit amet"} />
+        <Card title="Card-2" desc="Lorem ipsum dolor sit amet " />
+        <Card title="Card-3" desc="Lorem ipsum dolor sit amet " />
+        <Card title="Card-4" desc="Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet " />
+        <Card title="Card-5" desc="Lorem ipsum dolor sit amet " />
       </div>
-      <Footer/>
+
+      {/* footer component */}
+      <Footer />
     </div>
   )
 }
