@@ -1,0 +1,30 @@
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo span {
+    cursor: pointer;
+
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+li {
+    list-style: none;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+li:hover {
+    color: cyan;
+}
+

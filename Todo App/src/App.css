@@ -1,0 +1,63 @@
+#container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #d6d5d3e7;
+    box-shadow: 0 0 20px #030200e7;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+.input_container {
+    width: 100%;
+    margin-bottom: 20px;
+
+    input {
+        width: 80%;
+        padding: 8px;
+        font-size: 1rem;
+    }
+    button {
+        width: 20%;
+        padding: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: .7;
+    }
+}
+
+.todo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid slateblue;
+    padding: 10px;
+    align-items: center;
+    margin: 20px 10px;
+    border-radius: 8px;
+}
+
+.action_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    button {
+        padding: 3px 6px;
+        width: 60px;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    .edit_btn {
+        background-color: greenyellow;
+
+    }
+    .delete_btn {
+        background-color: red;
+    }
+}
+
+small {
+    color: #d12b2be1;
+}
