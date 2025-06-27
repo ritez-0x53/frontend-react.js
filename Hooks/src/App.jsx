@@ -16,10 +16,11 @@ function App() {
     {/* <UseEffect/> */}
     {/* <UseRef/> */}
 
-    <myContext.Provider value={{name : name , setName : setName , number : 12}}>
+    {/* <myContext.Provider value={{name : name , setName : setName , number : 12}}>
       <h2>App Component</h2>
     <UseContext/>
-    </myContext.Provider>
+    </myContext.Provider> */}
+
 
 
     </>
