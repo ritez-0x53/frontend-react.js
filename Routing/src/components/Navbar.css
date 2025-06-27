@@ -1,0 +1,27 @@
+.navbar {
+    padding: 20px;
+    background-color: royalblue;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 200px;
+    margin-bottom: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.red {
+    background-color: red;
+}
