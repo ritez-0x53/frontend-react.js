@@ -17,3 +17,11 @@ h1 {
   padding: 4px;
   /* display: inline-block; */
 }
+
+div {
+  border: 2px solid #ad0a5c;
+  padding: 30px;
+  h2 {
+    border: none;
+  }
+}
