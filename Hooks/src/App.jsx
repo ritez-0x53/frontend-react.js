@@ -5,6 +5,7 @@ import UseEffect from './Hooks/useEffect/UseEffect'
 import UseRef from './Hooks/useRef/UseRef'
 import UseContext from './Hooks/contextAPI/UseContext'
 import myContext from './Hooks/contextAPI/context'
+import UseMemo from './Hooks/useMemo/UseMemo'
 
 function App() {
 
@@ -20,7 +21,10 @@ function App() {
       <h2>App Component</h2>
     <UseContext/>
     </myContext.Provider> */}
+  
+      {/* <UseMemo/> */}
 
+      
 
 
     </>
