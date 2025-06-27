@@ -1,25 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Todo from './components/Todo'
 
 function App() {
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState();
   const [input, setInput] = useState("");
   const [isEmpty, setIsEmpty] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
+  const [editId , setEditId] = useState(null);
+
+  const inputRef = useRef();
 
   useEffect(() => {
-    const todos = localStorage.getItem("todos");
-    setTodos(val => JSON.parse(todos));
+    const tempTodo = localStorage.getItem("todos");
+    tempTodo && setTodos(JSON.parse(tempTodo));
   }, [])
 
   useEffect(() => {
-    if (todos.length !== 0) {
-      localStorage.setItem("todos", JSON.stringify(todos));
-    }
+    todos && localStorage.setItem("todos", JSON.stringify(todos));
 
-    console.log(todos)
     setInput(val => "");
   }, [todos])
 
@@ -30,9 +31,19 @@ function App() {
   function handleAdd(e) {
     if (input.length <= 0) {
       return setIsEmpty(true)
-
     }
-    setTodos(val => [{ name: input, isDone: false } , ...val])
+    setTodos(val => [{ name: input, isDone: false }, ...val])
+  }
+
+  function handleEditSave(){
+     if (input.length <= 0) {
+      return setIsEmpty(true)
+    }
+    setIsEdit(false)
+    const tempTodo = [...todos];
+    tempTodo[editId].name = input
+    setTodos(val => tempTodo);
+    setInput("")
   }
 
   return (
@@ -40,13 +51,13 @@ function App() {
       <Navbar />
       <div id='container' >
         <div className='input_container' >
-          <input value={input} onInput={handleInput} className='todo_input' type="text" name='todo' />
-          <button onClick={handleAdd} className='add_btn'>Add</button>
+          <input ref={inputRef} value={input} onInput={handleInput} className='todo_input' type="text" name='todo' />
+          <button onClick={!isEdit ? handleAdd : handleEditSave} className='add_btn'>{!isEdit ? "Add" : "Save"}</button>
           <small>{isEmpty && "todo cannot be empty"}</small>
         </div>
-        { 
-          todos.map((todo, ind) => {
-            return <Todo key={ind} id={ind} name={todo.name} isDone={todo.isDone} />
+        {
+          todos && todos.map((todo, ind) => {
+            return <Todo setIsEdit={setIsEdit} setInput={setInput} setEditId={setEditId} inputRef={inputRef} setTodos={setTodos} id={ind} name={todo.name} isDone={todo.isDone} set key={ind} />
           })
         }
 
