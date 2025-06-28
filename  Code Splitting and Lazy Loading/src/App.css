@@ -1,0 +1,48 @@
+.navbar {
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  display: flex;
+  gap: 200px;
+
+  ul {
+    display: flex;
+    gap: 30px;
+  }
+  ul li {
+    list-style: none;
+  }
+}
+
+.post {
+  padding: 10px;
+  background-color: #2d4281a2;
+  color: black;
+  margin: 20px 50px;
+
+}
+
+
+h1 {
+  text-align: center;
+  padding: 40px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+.post_container {
+  padding: 10px;
+  background-color: #56ca56e8;
+}
