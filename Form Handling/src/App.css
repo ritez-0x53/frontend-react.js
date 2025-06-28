@@ -1,0 +1,39 @@
+
+form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border: 2px solid green;
+  border-radius: 6px;
+  background-color: #068306b4;
+}
+
+form .input_wrapper {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  input {
+    padding: 6px 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 4px;
+
+    &:hover {
+      cursor: text;
+    }
+  }
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 4px 14px;
+  background-color: yellow;
+  border: 2px solid yellow;
+}
