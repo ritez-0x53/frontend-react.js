@@ -20,13 +20,13 @@ function Lists() {
 
   return (
 
-    posts && <div className="post_container">
+    posts ? <div className="post_container">
         {
             posts.map((val,ind,arr)=> {
                 return <div key={ind} className="post">{val.title}</div>
             })
         }
-    </div>
+    </div> : <h1>Loading ...</h1>
   )
 }
 

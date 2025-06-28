@@ -34,7 +34,7 @@ const router = createBrowserRouter([
 
 function App() {
   const [count , setCount ] = useState(0);
-
+  alert("")
   return (
     <div id='app' >
       <Suspense fallback={<h1>Loading ...</h1>} >
