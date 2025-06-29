@@ -9,7 +9,7 @@ form {
 }
 
 form .input_wrapper {
-  margin: 20px 0;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -27,6 +27,11 @@ form .input_wrapper {
       cursor: text;
     }
   }
+
+  small {
+    height: 12px;
+    color: #81e91f;
+  }
 }
 
 .btn {
@@ -36,4 +41,10 @@ form .input_wrapper {
   padding: 4px 14px;
   background-color: yellow;
   border: 2px solid yellow;
+  cursor: pointer;
+}
+
+.btn_container {
+  display: flex;
+  gap: 30px;
 }
