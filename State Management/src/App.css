@@ -1,0 +1,27 @@
+.container {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 10px;
+
+}
+
+button {
+  padding: 10px 12px;
+}
+
+h1 {
+  text-align: center;
+  border: 2px solid yellow;
+  margin: 10px;
+}
+
+.todo {
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: aquamarine;
+  color: black;
+  text-align: start;
+  height: 60px;
+  align-content: center;
+}
