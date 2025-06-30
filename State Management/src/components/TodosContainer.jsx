@@ -8,11 +8,14 @@ function TodosContainer() {
     const { data ,isLoading , error  } = useQuery({
         queryKey : ["posts"],
         queryFn : async () => {
-            const res = await fetch("https://jsonplceholder.typicode.com/posts" , {method:"GET"});
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts" , {method:"GET"});
             const posts = await res.json()
-            await delay(5);
+            // await delay(5);
             return posts;
-        }
+        },
+        staleTime : 4000,
+        refetchOnWindowFocus : true,
+        // refetchInterval : 2000
     })
 
     if(isLoading) { return <h1>Loading ...</h1> }

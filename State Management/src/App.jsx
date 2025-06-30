@@ -3,6 +3,7 @@ import "./App.css"
 import useCounterStore from './hooks/counter'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import TodosContainer from './components/TodosContainer';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools/production';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient} >
       <TodosContainer />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )
 }
