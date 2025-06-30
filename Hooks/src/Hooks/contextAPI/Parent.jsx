@@ -3,7 +3,7 @@ import Child from './Child'
 
 function Parent() {
   return (
-    <div>
+    <div className='container' >
         <h2>Parent Component</h2>
         <Child/>
     </div>

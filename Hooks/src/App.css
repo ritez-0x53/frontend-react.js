@@ -15,10 +15,9 @@ input , button {
 h1 {
   border: 2px solid greenyellow;
   padding: 4px;
-  /* display: inline-block; */
 }
 
-div {
+.container {
   border: 2px solid #ad0a5c;
   padding: 30px;
   h2 {

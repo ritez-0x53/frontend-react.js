@@ -5,7 +5,7 @@ import myContext from './context'
 function Child() {
     const nameContext = useContext(myContext);
   return (
-    <div>
+    <div className='container' >
         <h2>Child Component</h2>
         <button>{nameContext.name}</button>
     </div>

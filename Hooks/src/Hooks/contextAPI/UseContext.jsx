@@ -13,7 +13,7 @@ function UseContext() {
 
     useEffect(()=> { nameRef.current.value = "" } ,[name])
   return (
-    <div>
+    <div className='container' >
         <h2>Use Context Component</h2>
         <input type="text" ref={nameRef} />
         <button onClick={handleClick} >change</button>

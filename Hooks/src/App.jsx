@@ -7,6 +7,7 @@ import UseContext from './Hooks/contextAPI/UseContext'
 import myContext from './Hooks/contextAPI/context'
 import UseMemo from './Hooks/useMemo/UseMemo'
 import UseCallback from './Hooks/useCallback/UseCallback'
+import UseReducer from './Hooks/useReducer/UseReducer'
 
 function App() {
 
@@ -25,8 +26,10 @@ function App() {
   
       {/* <UseMemo/> */}
 
-      <UseCallback/>
+      {/* <UseCallback/> */}
 
+
+      <UseReducer/>
 
     </>
   )
